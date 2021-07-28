@@ -19,7 +19,7 @@ public class GetMyCurrentCarsController extends HttpServlet {
     private CarService carService;
 
     @Override
-    public void init() throws ServletException {
+    public void init() {
         carService = (CarService) injector.getInstance(CarService.class);
     }
 

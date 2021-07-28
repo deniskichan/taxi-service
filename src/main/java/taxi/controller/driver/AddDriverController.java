@@ -5,12 +5,15 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import taxi.lib.Injector;
 import taxi.model.Driver;
 import taxi.service.DriverService;
 
 public class AddDriverController extends HttpServlet {
     private static final Injector injector = Injector.getInstance("taxi");
+    private static final Logger logger = LogManager.getLogger((AddDriverController.class));
     private final DriverService driverService = (DriverService) injector
             .getInstance(DriverService.class);
 
@@ -23,6 +26,7 @@ public class AddDriverController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws IOException, ServletException {
+        logger.info("doPost method was called");
         String name = req.getParameter("name");
         String licenceNumber = req.getParameter("licence_number");
         String login = req.getParameter("login");
