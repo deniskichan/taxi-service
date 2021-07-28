@@ -1,6 +1,8 @@
 package taxi.service;
 
 import java.util.List;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import taxi.dao.CarDao;
 import taxi.lib.Inject;
 import taxi.lib.Service;
@@ -9,17 +11,21 @@ import taxi.model.Driver;
 
 @Service
 public class CarServiceImpl implements CarService {
+    private static final Logger logger = LogManager.getLogger((CarServiceImpl.class));
     @Inject
     private CarDao carDao;
 
     @Override
     public void addDriverToCar(Driver driver, Car car) {
+        logger.debug("method addDriverToCar was called with driver: {} and car: {}", driver, car);
         car.getDrivers().add(driver);
         carDao.update(car);
     }
 
     @Override
     public void removeDriverFromCar(Driver driver, Car car) {
+        logger.debug("method removeDriverFromCar was called with driver: {} and car: {}",
+                driver, car);
         car.getDrivers().remove(driver);
         carDao.update(car);
     }
