@@ -1,11 +1,12 @@
 ![taxi image](https://lh3.googleusercontent.com/proxy/C9Ug3_-5S1BM8XVniYMfEHzng7lCqppFbbrwAchAKjnB7yFga8ktb_GG0QI5LMALnVddmXnqV6ZU1kzF7Q)
-#Taxi service app
+
+# Taxi service app
 
 This simple application allows us to manage a database of drivers and taxi cars, register new drivers and new cars in the database, as well as assign new drivers to cars.
 Authentication is done using the driver's account. The application is based on SOLID principles and N-tier architecture with 3 levels such as DAO layer with CRUD operations, Service layer, Controller Layer.
 Input information from web pages as well as some service information from service layer will is logged to console and file.
 
-#Technologies used:
+# Technologies used:
 
 * Java 11
 * JDBC
@@ -18,7 +19,7 @@ Input information from web pages as well as some service information from servic
 * JSP
 * HTML, CSS
 
-#Configuration:
+# Configuration:
 
 * Clone this project to your computer and open project in your IDE.
 * Install MySQL and MySQL Workbench
