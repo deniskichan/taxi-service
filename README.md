@@ -23,9 +23,9 @@ Input information from web pages as well as some service information from servic
 
 * Clone this project to your computer and open project in your IDE.
 * Install MySQL and MySQL Workbench
-* Set your mySQL username and password as parameters in 'src/main/java/taxi/util/ConnectionUtil.java'
-* Copy content of the init_db.sql file in 'src/main/resources' folder, paste in MySQL query window and execute
-* In src/main/resources/log4j2.xml enter your absolute path where you want your log file to be stored, e.g. 'C:\Users\Admin\IdeaProjects\taxi-service\logs\app.log'
+* Set your mySQL username and password as parameters in `src/main/java/taxi/util/ConnectionUtil.java`
+* Copy content of the init_db.sql file in `src/main/resources` folder, paste in MySQL query window and execute
+* In src/main/resources/log4j2.xml enter your absolute path where you want your log file to be stored, e.g. `C:\Users\Admin\IdeaProjects\taxi-service\logs\app.log`
 * Configure Apache Tomcat
     * Edit Configurations
     * Add New Configuration -> TomCat Server -> Local
