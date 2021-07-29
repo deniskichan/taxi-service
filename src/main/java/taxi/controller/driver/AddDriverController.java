@@ -26,11 +26,12 @@ public class AddDriverController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws IOException, ServletException {
-        logger.info("doPost method was called");
         String name = req.getParameter("name");
         String licenceNumber = req.getParameter("licence_number");
         String login = req.getParameter("login");
         String password = req.getParameter("password");
+        logger.info("doPost method was called with parameters: Name: {}, License Number: {},"
+                + " Login: {}", name, licenceNumber, login);
         Driver driver = new Driver(name, licenceNumber, login, password);
         driverService.create(driver);
         req.setAttribute("success", "Driver was successfully registered");

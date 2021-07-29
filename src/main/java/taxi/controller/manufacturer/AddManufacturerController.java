@@ -26,9 +26,10 @@ public class AddManufacturerController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws IOException, ServletException {
-        logger.info("doPost method was called");
         String name = req.getParameter("name");
         String country = req.getParameter("country");
+        logger.info("doPost method was called with parameters: Name: {}, Country: {}",
+                name, country);
         Manufacturer manufacturer = new Manufacturer(name, country);
         manufacturerService.create(manufacturer);
         req.setAttribute("success", "Manufacturer was successfully registered");
